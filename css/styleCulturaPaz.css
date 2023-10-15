@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+  --color-primario: #d3ad7f;
+  --color-secundario: #c69984;
+}
+
+
+*{
+  font-family: 'Nunito',sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+section{
+  padding: 2rem 9%;
+}
+
+/* header */
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  z-index: 2;
+  height: 70px;
+}
+
+.header .logo img{
+  height: 6rem;
+}
+
+.header .navbar #close{
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.header .navbar a{
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .navbar a:hover{
+  color: #d3ad7f;
+}
+
+.header #menu{
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+
+
+  section{
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .header #menu{
+    display: inline-block;
+  }
+
+  .header .navbar{
+    position: fixed;
+    top: 0; right: -105%;
+    width: 30rem;
+    background: #dacbb8;
+    backdrop-filter: blur(50px);
+    transition: .5s;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    z-index: 1200;
+  }
+
+  .header .navbar.active{
+    right: 0;
+  }
+
+  .header .navbar #close{
+    display: block;
+  }
+
+  .header .navbar a{
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: none;
+  }
+
+
+}
+
+@media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
+}
+
+/* Main */
+
+.header {
+    background-color: #dacbb8;
+}
+
+body {
+    background: white;
+}
+
+
+.que-es-cultura {
+    font-size: 3rem;
+    color: black;
+    padding-top: 130px;
+}
+
+.hr-cultura-paz {
+  margin-left: 35%;
+  margin-right: 35%;
+  border: none; 
+  height: 2px; 
+  background-color: var(--color-secundario); 
+}
+
+.texto-cultura {
+  font-size: 16px;
+  margin-left: 20%;
+  margin-right: 20%;
+  line-height: 30px;
+}
+
+.card {
+  height: 26rem;
+  width: 70rem;
+  border: none; 
+  background-color: var(--color-secundario);
+}
+
+.la-cultura-rechaza {
+  font-size: 2.6rem;
+  font-family: 'Playfair Display', serif;
+  padding-top: 18px;
+}
+
+.imagen-cultura {
+  padding-top: 3rem;
+  height: 23rem;
+}
+
+@media (width <= 768px) {
+     .card {
+      height: auto;
+      text-align: center;
+     }
+}
+
+.frase-ghandi {
+  background-image:url(../images/17955961.jpg);
+  height: 15rem;
+  line-height: 0.5;
+}
+
+.texto-frase {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-style:italic;
+}
+
+@media (width <= 768px) {
+  .frase-ghandi {
+    background-image:url(../images/17955961.jpg);
+    height: 20rem;
+    line-height: 1;
+  }
+}
+
+.columna {
+  height: 30rem;
+}
+
+.experiencia {
+  padding: 40px 40px 60px 40px;
+}
+
+.experiencia .columna {
+  padding: 20px;
+  border: 2px solid #8080804d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.2s ease-in;
+}
+
+.experiencia .columna:hover {
+  color: white;
+  background-color: var(--color-primario);
+}
+
+.experiencia i {
+  font-size: 2.5rem;
+  color: #7ade30;
+  background-color: #0a0a23;
+  padding: 8px 19px;
+  border-radius: 50%;
+}
+
+.experiencia-titulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badges-contenedor {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badge {
+  margin: 5px;
+  background-color: #c39732;
+}
+
+.defensores-texto {
+  font-size: 3rem;
+}
+
+.hr-defensores {
+  margin-left: 35%;
+  margin-right: 35%;
+  border: none; 
+  height: 3px; 
+  background-color: var(--color-secundario); 
+}
+
+.img-columna {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.Dia-paz {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 9rem;
+}
+
+.Dia-paz-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Dia-paz-text h5 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.Dia-paz-text p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+@media (width <= 768px ) {
+     .Dia-paz {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: center;
+     }
+}
+
+
+.Bandera {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 9rem;
+}
+
+.Bandera-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Bandera-text h5 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.Bandera-text p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+
+@media (width <= 768px ) {
+  .Bandera {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   align-items: center;
+  }
+}
+
+
+.Proyecto-paz {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 9rem;
+}
+
+.Proyecto-paz-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Proyecto-paz-text h5 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.Proyecto-paz-text p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+@media (width <= 768px ) {
+     .Proyecto-paz {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: center;
+     }
+}
+
+
+
