@@ -27,7 +27,7 @@ section{
   justify-content: space-between;
   padding: 2rem 9%;
   z-index: 2;
-  background-color: #dacbb8;
+  background-color: #87CEEB;
 }
 
 .header .logo img{
@@ -52,7 +52,7 @@ section{
 }
 
 .header .navbar a:hover{
-  color: #d3ad7f;
+  color: #4c859b;
 }
 
 .header #menu{
@@ -83,7 +83,7 @@ section{
 
 .home .content .title{
   font-size: 6rem;
-  color: #debf71;
+  color: #a0e47f;
   text-transform: uppercase;
 }
 
@@ -106,7 +106,7 @@ section{
   padding: .9rem 3rem;
   font-size: 1.7rem;
   color: #fff;
-  background: #c69984;
+  background: #c8c5c5;
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@ section{
     position: fixed;
     top: 0; right: -105%;
     width: 30rem;
-    background: #dacbb8;
+    background: #87CEEB;
     backdrop-filter: blur(50px);
     transition: .5s;
     height: 100%;
