@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styleDenuncia.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Signika+Negative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/denuncias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
-    <title>Document</title>
+    <title>Formulario de denuncias</title>
 </head>
 <body>
     
+    <!-- NavBar -->
+
     <header class="header">
 
         <a href="#" class="logo">
@@ -37,71 +35,102 @@
 
     </header>
 
-    <br><br><br><br><br><br><br><br>
 
-    <div class="container contenedor-denuncia">
-        <h1 class="titulo-denuncia">Formulario de Denuncia</h1>
-        <form id="denunciaForm">
-            <label class="denuncia" for="denuncia">Escribe tu denuncia:</label>
-            <textarea id="denuncia" name="denuncia" rows="4" cols="50" required placeholder="Tu denuncia se dirigirá hacia el rector de la facultad:"></textarea>
-            <br><br><br>
-            <button type="submit" class="btn-denuncia">Enviar Denuncia</button>
-        </form>
+    <!-- Formulario de denuncias -->
+
+    <form id="form">
+        <h2>Formulario de Denuncias</h2>
+
+        <div class="pregunta" id="pregunta1">
+            <label>Pregunta 1: ¿Alguna pregunta inicial?</label>
+            <input type="text" name="respuesta1">
+            <button type="button" onclick="mostrarPregunta('pregunta1', 'pregunta2')">Siguiente</button>
+        </div>
+
+        <div class="pregunta" id="pregunta2" style="display: none;">
+            <label>Pregunta 2: ¿Otra pregunta?</label>
+            <input type="text" name="respuesta2">
+            <button type="button" onclick="mostrarPregunta('pregunta2', 'pregunta3')">Siguiente</button>
+        </div>
+
+        <div class="pregunta" id="pregunta3" style="display: none;">
+            <label>Pregunta 3: ¿Una más?</label>
+            <input type="text" name="respuesta3">
+            <button type="button" onclick="guardarRespuestas()">Enviar</button>
+        </div>
+    </form>
+
+    <div id="resultados" style="display: none;">
+        <h2>Respuestas Guardadas</h2>
+        <!-- Aquí se mostrarán las respuestas después de enviar el formulario -->
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer-basic container-fluid">
+        <footer>
+
+            <ul class="list-inline pt-4">
+                <li class="list-inline-item"><a href="index.html">Inicio</a></li>
+                <li class="list-inline-item"><a href="culturaPaz.html">Cultura de Paz</a></li>
+                <li class="list-inline-item"><a href="denuncias.html">Denuncias</a></li>
+                <li class="list-inline-item"><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <p class="copyright">HelpMe © 2023</p>
+
+        </footer>
     </div>
 
 
-    <footer class="footer-distributed">
+    <!-- Script para el formulario de denuncias -->
 
-        <div class="footer-left">
-            <h3>Help<span>Me</span></h3>
+    <script>
 
-            <p class="footer-links">
-                <a href="#">Inicio</a>
-                |
-                <a href="#">Cultura de paz</a>
-                |
-                <a href="#">Denuncias</a>
-                |
-                <a href="#">Contacto</a>
-            </p>
+        // Aqui se declaran las llaves o id de emailjs 
 
-            <p class="footer-company-name">Copyright © 2023 <strong>HelpMe</strong> Derechos reservados</p>
-        </div>
+        const EMAILJS_USER_ID = 'l3FRsmN2B-91s_7j7';
+        const EMAILJS_SERVICE_ID = 'service_1f93bvs';
+        const EMAILJS_TEMPLATE_ID = 'template_am8db5u';
 
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>México</span>
-                    Colima</p>
-            </div>
+        function mostrarPregunta(preguntaActual, preguntaSiguiente) {
+            document.getElementById(preguntaActual).style.display = 'none';
+            document.getElementById(preguntaSiguiente).style.display = 'block';
+        }
 
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+52 4521689202</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:sagar00001.co@gmail.com">spinon@ucol.mx</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Conocenos</span>
-                <strong>Help Me</strong> es un sitio web donde podras realizar denuncia
-                 de forma completamente anonima que pasaran por un filtro y posteriormente
-                  se reportaran al rector de la facultad.
-            </p>
-    
-        </div>
-    </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="scriptDenuncua.js"></script>
+        function guardarRespuestas() {
+            var form = document.getElementById("form");
+            var respuesta1 = form.elements.respuesta1.value;
+            var respuesta2 = form.elements.respuesta2.value;
+            var respuesta3 = form.elements.respuesta3.value;
 
+    // Configura Email.js
+    emailjs.init(EMAILJS_USER_ID);
+
+    // Define los parámetros del correo
+    var templateParams = {
+        respuesta1: respuesta1,
+        respuesta2: respuesta2,
+        respuesta3: respuesta3
+    };
+
+    // Envía el correo electrónico
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function (response) {
+            alert('Respuestas enviadas por correo electrónico.');
+            document.getElementById('form').reset();
+        })
+        .catch(function (error) {
+            console.error('Error al enviar respuestas por correo:', error);
+            alert('Hubo un error al enviar las respuestas por correo. Inténtalo de nuevo más tarde.');
+        });
+}
+
+    </script>
     <!-- GSAP CDN Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-
-    <!-- custom js file -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 
 </body>

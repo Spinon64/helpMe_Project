@@ -1,3 +1,5 @@
+//Script para el funcionamiento y movimiento de la navbar y de la landingpage
+
 let navbar = document.querySelector('.header .navbar')
 
 document.querySelector('#menu').onclick = () =>{
@@ -9,7 +11,7 @@ document.querySelector('#close').onclick = () =>{
 }
 
 
-// mousemove home img
+//Movimiento del mouse con las imagenes
 
 document.addEventListener('mousemove', move);
 function move(e){
