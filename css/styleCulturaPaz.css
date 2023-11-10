@@ -444,3 +444,178 @@ font-size:13px;
 color:#aaa;
 margin-bottom:0;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Add this at the end of your CSS to target mobile screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .header .logo img {
+    height: 4rem;
+  }
+
+  .header #menu {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    width: 100%;
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .que-es-cultura {
+    font-size: 2rem;
+    padding-top: 30px;
+  }
+
+  .hr-cultura-paz {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .texto-cultura {
+    font-size: 14px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .la-cultura-rechaza {
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+
+  .imagen-cultura {
+    padding-top: 1rem;
+    height: auto;
+  }
+
+  .columna {
+    height: auto;
+  }
+
+  .defensores-paz .columna {
+    padding: 10px;
+  }
+
+  .defensores-titulo {
+    font-size: 20px;
+  }
+
+  .badges-contenedor {
+    font-size: 16px;
+  }
+
+  .defensores-texto {
+    font-size: 2rem;
+  }
+
+  .hr-defensores {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .img-columna {
+    width: 100px;
+    height: 100px;
+  }
+
+  .Dia-paz {
+    gap: 2rem;
+  }
+
+  .Dia-paz-img img {
+    border-radius: 5px;
+  }
+
+  .Dia-paz-text h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .Dia-paz-text p {
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .Bandera {
+    gap: 2rem;
+  }
+
+  .Bandera-img img {
+    border-radius: 5px;
+  }
+
+  .Bandera-text h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .Bandera-text p {
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .Proyecto-paz {
+    gap: 2rem;
+  }
+
+  .Proyecto-paz-img img {
+    border-radius: 5px;
+  }
+
+  .Proyecto-paz-text h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .Proyecto-paz-text p {
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .footer-basic {
+    padding-bottom: 2rem;
+  }
+
+  .footer-basic ul {
+    font-size: 16px;
+  }
+
+  .footer-basic .social > a {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 4px;
+  }
+}

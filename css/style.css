@@ -143,7 +143,7 @@ section{
 
 }
 
-@media (max-width:768px){
+@media (max-width:760px){
 
   .header #menu{
     display: inline-block;
@@ -183,7 +183,7 @@ section{
   }
 
   .home .image img{
-    width: 368px;
+    width: 350px;
   } 
 
   .home .content .title{
